@@ -9,4 +9,7 @@
     <DeviceId>602A95E3-B42A-4AE5-BA1C-9C4E38854668</DeviceId>
     <UseEmulator>false</UseEmulator>
   </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
 </Project>

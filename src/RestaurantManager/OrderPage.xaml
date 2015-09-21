@@ -1,12 +1,18 @@
-﻿<Page
-    x:Class="RestaurantManager.OrderPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:RestaurantManager"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-
+﻿<Page x:Class="RestaurantManager.UniversalWindows.OrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:RestaurantManager"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+    <Page.TopAppBar>
+        <AppBar>
+            <AppBarButton Name="Home"
+                          Click="OnHomeButtonClicked"
+                          Icon="Home"
+                          Label="Home" />
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
@@ -19,9 +25,39 @@
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textBlock" Grid.Row="3" TextWrapping="Wrap" Text="**Add to Order**" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,25" />
-        <TextBlock x:Name="textBlock_Copy" Grid.Row="3" TextWrapping="Wrap" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,25" Text="**Submit Order**" />
-        <TextBlock x:Name="textBlock1" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Special Requests:" VerticalAlignment="Top" />
-        <TextBlock x:Name="textBlock2" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Text="Order Items:" />
+        <ListView x:Name="listView"
+                  Grid.Row="1"
+                  Grid.RowSpan="2" />
+        <TextBlock x:Name="textBlock1"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="Special Requests:"
+                   TextWrapping="Wrap" />
+        <TextBlock x:Name="textBlock2"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Text="Order Items:"
+                   TextWrapping="Wrap" />
+        <ListView x:Name="listView1"
+                  Grid.Row="2"
+                  Grid.Column="2" />
+        <Button x:Name="btnAddOrder"
+                Grid.Row="3"
+                Margin="0,25"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Add to Order" />
+        <Button x:Name="btnSubmitOrder"
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Margin="0,25"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Submit Order" />
     </Grid>
 </Page>
