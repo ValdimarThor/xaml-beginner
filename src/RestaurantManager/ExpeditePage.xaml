@@ -24,6 +24,6 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Content="Clear All Orders" />
-        <GridView x:Name="gridView" />
+        <GridView x:Name="gridView" Background="#FF800A0A" />
     </Grid>
 </Page>
