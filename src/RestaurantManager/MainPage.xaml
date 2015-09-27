@@ -1,11 +1,10 @@
-﻿<Page
-    x:Class="RestaurantManager.UniversalWindows.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:RestaurantManager"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+﻿<Page x:Class="RestaurantManager.UniversalWindows.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:RestaurantManager"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -17,9 +16,30 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnNavToOrderPage" HorizontalAlignment="Center" Grid.Row="2" Content="Go to Orders View"  VerticalAlignment="Center" Click="OnNavigateToOrdersPage" />
-        <Button x:Name="btnSubmitOrderPage" HorizontalAlignment="Center" Grid.Row="2" Content="Submit Order" VerticalAlignment="Center" Grid.Column="1" Click="OnSubmitOrder" />
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Center"  Text="Internal Test Version" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Grid.Row="1" FontSize="20" />
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Center"  Text="Restaurant Manager" VerticalAlignment="Bottom" Grid.ColumnSpan="2" />
+        <TextBlock x:Name="textBlock_Copy2"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   Text="Restaurant Manager" />
+        <TextBlock x:Name="textBlock_Copy1"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   FontSize="18"
+                   Text="Internal Test Version" />
+        <Button x:Name="btnNavToOrderPage"
+                Grid.Row="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="OnNavigateToOrdersPage"
+                Content="Go to Orders View" />
+        <Button x:Name="btnSubmitOrderPage"
+                Grid.Row="2"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="OnSubmitOrder"
+                Content="Submit Order" />
     </Grid>
 </Page>

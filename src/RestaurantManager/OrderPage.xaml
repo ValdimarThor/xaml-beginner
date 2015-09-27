@@ -27,7 +27,9 @@
         </Grid.RowDefinitions>
         <ListView x:Name="listView"
                   Grid.Row="1"
-                  Grid.RowSpan="2" Background="#FF16B239" />
+                  Grid.RowSpan="2"
+                  ItemsSource="{Binding MenuItems,
+                                        Source={StaticResource DataManager}}" />
         <TextBlock x:Name="textBlock1"
                    Grid.Row="1"
                    Grid.Column="1"
@@ -44,7 +46,9 @@
                    TextWrapping="Wrap" />
         <ListView x:Name="listView1"
                   Grid.Row="2"
-                  Grid.Column="2" Background="#FF0A3470" />
+                  Grid.Column="2"
+                  ItemsSource="{Binding CurrentlySelectedMenuItems,
+                                        Source={StaticResource DataManager}}" />
         <Button x:Name="btnAddOrder"
                 Grid.Row="3"
                 Margin="0,25"

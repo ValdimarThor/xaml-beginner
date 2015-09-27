@@ -18,12 +18,12 @@
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        <GridView x:Name="gridView" ItemsSource="{Binding OrderItems, Source={StaticResource DataManager}}" />
         <Button x:Name="btnClearAll"
                 Grid.Row="1"
                 Margin="0,25"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Content="Clear All Orders" />
-        <GridView x:Name="gridView" Background="#FF800A0A" />
     </Grid>
 </Page>
